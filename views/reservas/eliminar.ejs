@@ -1,0 +1,23 @@
+<section class="panel-formulario">
+  <p class="etiqueta">Eliminar reserva</p>
+
+  <h1>Confirmar eliminación</h1>
+
+  <p>¿Estás seguro de que querés eliminar esta reserva?</p>
+
+  <p><strong>Estudiante:</strong> <%= reserva.estudiante %></p>
+  <p><strong>Sala:</strong> <%= reserva.sala %></p>
+  <p><strong>Fecha:</strong> <%= reserva.fecha %></p>
+  <p><strong>Turno:</strong> <%= reserva.turno %></p>
+  <p><strong>Estado:</strong> <%= reserva.estado %></p>
+
+  <p>Esta acción no se puede deshacer.</p>
+
+  <form action="/reservas/<%= reserva.id %>/eliminar" method="POST">
+    <button type="submit">Confirmar eliminación</button>
+  </form>
+
+  <p>
+    <a href="/reservas/<%= reserva.id %>">Cancelar</a>
+  </p>
+</section>
